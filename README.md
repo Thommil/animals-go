@@ -10,7 +10,7 @@ The build environment and all dependencies can be loaded using the command :
 
 The GOPATH will be defined to current folder.
 
-The code will be downloaded from different repositories and compiled in current GOPATH.
+The code will be downloaded from different repositories and compiled in current GOPATH. The GOPATH/bin folder is also added to PATH for direct use.
 
 To rebuild the code use the script :
 
