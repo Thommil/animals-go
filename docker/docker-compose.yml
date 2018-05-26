@@ -10,8 +10,6 @@ services:
     build : 
       context: "./"
       dockerfile: "animals-go-ws.Dockerfile"
-    environment:
-      NODE_ENV: "development"
     ports:
       - "80:80"
 

@@ -5,9 +5,14 @@ if [ $# -ne 1 ] ; then
 	exit 1
 fi
 
+CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 if [ $1 == 'all' ] ; then	
-	go install github.com/thommil/animals-go-ws
+	# animals-go-ws
+	go get github.com/thommil/animals-go-ws
+	cp $CWD/src/github.com/thommil/animals-go-ws/config/animals-go-ws.json $CWD/bin
 else
-	go install $1
+	go get $1
+	cp $CWD/src/github.com/thommil/$1/config/$1.json $CWD/bin
 fi
 
