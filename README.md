@@ -19,4 +19,8 @@ To rebuild the code use the script :
 ```
 
 # Deploy on Docker
-Simply use the provided **docker-compose.yml** to deploy on Docker.
+A dedicated script allow to deploy all service or several containers :
+
+```shell
+./docker-rebuild.sh all | PACKAGE-NAME
+```

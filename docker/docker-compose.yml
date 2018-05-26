@@ -5,9 +5,11 @@ services:
   animals-go-ws:
     container_name: "animals-go-ws"
     image: "animals-go-ws"
+    depends_on:
+      - mongo
     build : 
       context: "./"
-      dockerfile: "src/github.com/thommil/animals-go-ws/Dockerfile"
+      dockerfile: "animals-go-ws.Dockerfile"
     environment:
       NODE_ENV: "development"
     ports:
