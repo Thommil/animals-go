@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  #Web Service
+  animals-go-ws:
+    container_name: "animals-go-ws"
+    image: "animals-go-ws"
+    build : 
+      context: "./"
+      dockerfile: "src/github.com/thommil/animals-go-ws/Dockerfile"
+    environment:
+      NODE_ENV: "development"
+    ports:
+      - "80:80"
+
+  #MongoDB
+  mongo:
+    container_name: "mongo"
+    image: "mongo:latest"
+    ports:
+      - "27017:27017"
