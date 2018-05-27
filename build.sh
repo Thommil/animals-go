@@ -7,12 +7,14 @@ fi
 
 CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+mkdir -p $CWD/bin/config
+
 if [ $1 == 'all' ] ; then	
 	# animals-go-ws
-	go get github.com/thommil/animals-go-ws
-	cp $CWD/src/github.com/thommil/animals-go-ws/config/animals-go-ws.json $CWD/bin
+	go get github.com/thommil/animals-go-ws	
+	cp $CWD/config/* $CWD/bin/config
 else
 	go get $1
-	cp $CWD/src/github.com/thommil/$1/config/$1.json $CWD/bin
+	cp $CWD/config/$1.json $CWD/bin/config
 fi
 
