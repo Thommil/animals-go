@@ -1,6 +1,19 @@
 version: "3"
 
 services:
+  
+  #Reverse Proxy
+  reverse-proxy:
+    container_name: "reverse-proxy"
+    image: "reverse-proxy"
+    build : 
+      context: "./"
+      dockerfile: "reverse-proxy.dockerfile"
+    depends_on:
+      - "animals-go-ws"
+    ports:
+      - "80:80"
+
   #Web Service
   animals-go-ws:
     container_name: "animals-go-ws"
@@ -9,7 +22,7 @@ services:
       - mongo
     build : 
       context: "../"
-      dockerfile: "docker/animals-go-ws.Dockerfile"
+      dockerfile: "docker/animals-go-ws.dockerfile"
     environment:
       GIN_MODE: "release"
     ports:
