@@ -11,7 +11,7 @@ services:
       context: "../"
       dockerfile: "docker/animals-go-ws.Dockerfile"
     ports:
-      - "80:80"
+      - "80:8001"
 
   #MongoDB
   mongo:

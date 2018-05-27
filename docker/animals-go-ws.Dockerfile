@@ -12,6 +12,4 @@ COPY config/animals-go-ws.json $GOPATH/bin/config
 #Change IN location below to set specific configuration file from an URL
 #ADD https://raw.githubusercontent.com/thommil/animals-go/master/config/animals-go-ws.json $GOPATH/bin/config
 
-
-
 CMD ["animals-go-ws"]

@@ -1,4 +1,9 @@
 {
+	"http" : {
+		"host" : "127.0.0.1",
+		"port" : 8001
+	},
+
 	"mongo" : {
 		"url" : "mongodb://mongo:27017"
 	}
