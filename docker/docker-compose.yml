@@ -8,8 +8,8 @@ services:
     depends_on:
       - mongo
     build : 
-      context: "./"
-      dockerfile: "animals-go-ws.Dockerfile"
+      context: "../"
+      dockerfile: "docker/animals-go-ws.Dockerfile"
     ports:
       - "80:80"
 
