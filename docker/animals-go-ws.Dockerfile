@@ -3,6 +3,8 @@ FROM golang:latest
 WORKDIR /go
 ENV GOPATH /go
 
+ENV BUILD 1
+
 RUN mkdir -p $GOPATH/bin/config
 RUN go get -v github.com/thommil/animals-go-ws
 

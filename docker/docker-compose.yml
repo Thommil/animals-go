@@ -10,12 +10,14 @@ services:
     build : 
       context: "../"
       dockerfile: "docker/animals-go-ws.Dockerfile"
+    environment:
+      GIN_MODE: "release"
     ports:
-      - "80:8001"
+      - "8001"
 
   #MongoDB
   mongo:
     container_name: "mongo"
     image: "mongo:latest"
     ports:
-      - "27017:27017"
+      - "27017"
