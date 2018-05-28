@@ -14,6 +14,20 @@ services:
     ports:
       - "80:80"
 
+  #Authentication
+  animals-go-auth:
+    container_name: "animals-go-auth"
+    image: "animals-go-auth"
+    depends_on:
+      - mongo
+    build : 
+      context: "../"
+      dockerfile: "docker/animals-go-auth.dockerfile"
+    environment:
+      GIN_MODE: "release"
+    ports:
+      - "8001"
+
   #Web Service
   animals-go-ws:
     container_name: "animals-go-ws"
@@ -26,7 +40,7 @@ services:
     environment:
       GIN_MODE: "release"
     ports:
-      - "8001"
+      - "8002"
 
   #MongoDB
   mongo:
