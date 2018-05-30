@@ -5,6 +5,11 @@
 	},
 
 	"mongo" : {
-		"url" : "mongodb://mongo:27017"
+		"url" : "mongodb://localhost:27017/dev"
+	},
+
+	"authentication" : {
+		"url" : "http://localhost:8001/private/authenticate/:tokenString",
+		"expired" : 3600
 	}
 }

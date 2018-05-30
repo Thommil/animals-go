@@ -5,15 +5,20 @@
 	},
 
 	"mongo" : {
-		"url" : "mongodb://mongo:27017"
+		"url" : "mongodb://localhost:27017/dev"
+	},
+
+	"jwt" : {		
+		"secret" : "mysecret",
+		"expired" : 86400
 	},
 
 	"providers" : {
-		"generic" : {
-			"alg" : "HS256",
-			"secret" : "mysecret"
-		},
 		"facebook" : {},
-		"google" : {}
+		"google" : {
+			"url" : "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=:idToken",
+			"iss" : "https://accounts.google.com",
+			"aud" : "889377843709-rlu1j897dc6505lksfevkshv2jmvgb47.apps.googleusercontent.com"
+		}
 	}
 }
