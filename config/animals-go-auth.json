@@ -10,14 +10,15 @@
 
 	"jwt" : {		
 		"secret" : "mysecret",
-		"expired" : 86400
+		"expired" : 86400,
+		"issuer" : "animals-go.com"
 	},
 
 	"providers" : {
 		"facebook" : {},
 		"google" : {
 			"url" : "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=:idToken",
-			"iss" : "https://accounts.google.com",
+			"iss" : "accounts.google.com",
 			"aud" : "889377843709-rlu1j897dc6505lksfevkshv2jmvgb47.apps.googleusercontent.com"
 		}
 	}
